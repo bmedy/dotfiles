@@ -26,14 +26,11 @@ declare -a HOMEBREW_CASKS=(
     "flash"
     "google-chrome"
     "imageoptim"
-    "libreoffice"
     "licecap"
     "lisanet-gimp"
     "macvim"
-    "opera"
     "spectacle"
     "the-unarchiver"
-    "transmission"
     "virtualbox"
     "vlc"
 )
@@ -44,8 +41,6 @@ declare -a HOMEBREW_CASKS=(
 declare -a HOMEBREW_ALTERNATE_CASKS=(
     "firefox-nightly"
     "google-chrome-canary"
-    "opera-beta"
-    "opera-developer"
     "webkit-nightly"
 )
 

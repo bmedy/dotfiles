@@ -3,7 +3,16 @@
 cd "$(dirname "${BASH_SOURCE}")" && source "utils.sh"
 
 declare -r -a NPM_PACKAGES=(
-    "jshint"
+    "bower"
+    "gulp"
+    "grunt-cli"
+    "yo"
+    "cordova"
+    "generator-gulp-angular"
+    "generator-jhipster"
+    "generator-polymer"
+    "ionic"
+    "jspm"
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

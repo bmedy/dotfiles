@@ -10,8 +10,9 @@ main() {
 
     if [ "$OS" == "osx" ]; then
         ./os_x/set_preferences.sh
-    elif [ "$OS" == "ubuntu" ]; then
-        ./ubuntu/set_preferences.sh
+    # no specific preference for ubuntu gnome.
+    # elif [ "$OS" == "ubuntu" ]; then
+    #    ./ubuntu/set_preferences.sh
     fi
 
 }

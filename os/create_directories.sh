@@ -3,16 +3,15 @@
 cd "$(dirname "${BASH_SOURCE}")" && source "utils.sh"
 
 declare -a DIRECTORIES=(
-    "$HOME/archive"
-    "$HOME/Downloads/torrents"
     "$HOME/projects"
+    "$HOME/.npm-packages"
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
     for i in ${DIRECTORIES[@]}; do
-        mkd "$i"
+        md "$i"
     done
 }
 

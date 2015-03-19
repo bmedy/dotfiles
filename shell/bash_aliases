@@ -4,11 +4,13 @@
 # | Navigation                                                         |
 # ----------------------------------------------------------------------
 
-alias ~="cd ~"
+alias ~="cd ~" # `cd` is probably faster to type though
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias cd..="cd .."
+alias -- -="cd -"
 
 # ----------------------------------------------------------------------
 # | Network                                                            |
@@ -100,7 +102,6 @@ alias ll="ls -l"
 alias m="man"
 alias map="xargs -n1"
 alias q="exit"
-alias rm="rm -rf"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -165,3 +166,77 @@ if [ "$OS" == "osx" ]; then
 elif [ "$OS" == "ubuntu" ]; then
     alias o="xdg-open"
 fi
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+if [ "$OS" == "osx" ]; then
+    alias use-node="brew unlink iojs && brew link --force node"
+    alias use-iojs="brew unlink node && brew link --force iojs"
+fi
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# From my mac
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Shortcuts
+alias cdd="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias cdb="cd ~/Desktop"
+alias cdp="cd ~/projects"
+alias g="git"
+alias h="history"
+alias j="jobs"
+
+# programs
+# TODO: ubuntu version
+if [ "$OS" == "osx" ]; then
+  alias st='open -a "Sublime Text 3"'
+  # also/or do this:
+  # ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+  alias preview="open -a '$PREVIEW'"
+  alias xcode="open -a '/Developer/Applications/Xcode.app'"
+  alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
+  alias safari="open -a safari"
+  alias firefox="open -a firefox"
+  alias opera="open -a opera"
+  alias chrome="open -a google\ chrome"
+  alias chromium="open -a chromium"
+  alias dashcode="open -a dashcode"
+  alias finder='open -a Finder'
+  alias fireworks="open -a '/Applications/Adobe Fireworks CS6/Adobe Fireworks CS6.app'"
+  alias photoshop="open -a '/Applications/Adobe Photoshop CS6/Adobe Photoshop.app'"
+  #alias gpr="~/utils/gpr $1"
+  alias gh="open -a google\ chrome 'http://github.com/bmedy'"
+fi
+
+# general shortcuts
+alias pro="cd ~/projects"
+#alias bl="open -a google\ chrome 'http://browserling.com'"
+
+# be nice
+alias please=sudo
+
+# List all files colorized in long format
+alias l="ls -l"
+
+# List all files colorized in long format, including dot files
+alias la="ls -la"
+alias ll="ls -la"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# `cat` with beautiful colors. requires Pygments installed.
+#                  sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
+# Shortcuts
+alias g="git"
+alias v="vim"
+
+# File size
+alias fs="stat -f \"%z bytes\""
+

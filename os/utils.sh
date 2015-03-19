@@ -68,7 +68,7 @@ is_git_repository() {
         || return 1
 }
 
-mkd() {
+md() {
     if [ -n "$1" ]; then
         if [ -e "$1" ]; then
             if [ ! -d "$1" ]; then

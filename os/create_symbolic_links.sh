@@ -11,6 +11,7 @@ declare -a FILES_TO_SYMLINK=(
     "shell/bash_profile"
     "shell/bash_prompt"
     "shell/bashrc"
+    "shell/npmrc"
     "shell/curlrc"
     "shell/inputrc"
     "shell/screenrc"

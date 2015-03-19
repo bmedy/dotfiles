@@ -75,7 +75,7 @@ gz() {
 
 # Create new directories and enter the first one
 
-mkd() {
+md() {
     if [ -n "$*" ]; then
         mkdir -p "$@" && cd "$@"
         #      └─ make parent directories if needed
@@ -239,4 +239,49 @@ hrfs() {
     sed -e ":l; s/\([0-9]\)\([0-9]\{3\}\)/\1,\2/; t l"
     #                          └─ add commas to the numbers
     #                             (changes "1023.2 KB" to "1,023.2 KB")
+}
+
+# find shorthand
+function f() {
+    find . -name "$1"
+}
+
+# Create a git.io short URL
+function gitio() {
+        if [ -z "${1}" -o -z "${2}" ]; then
+                echo "Usage: \`gitio slug url\`"
+                return 1
+        fi
+        curl -i http://git.io/ -F "url=${2}" -F "code=${1}"
+}
+
+# Syntax-highlight JSON strings or files
+function json() {
+    if [ -p /dev/stdin ]; then
+        # piping, e.g. `echo '{"foo":42}' | json`
+        python -mjson.tool | pygmentize -l javascript
+    else
+        # e.g. `json '{"foo":42}'`
+        python -mjson.tool <<< "$*" | pygmentize -l javascript
+    fi
+}
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+        if [ $# -eq 0 ]; then
+                subl .
+        else
+                subl "$@"
+        fi
+}
+
+# `v` with no arguments opens the current directory in Vim, otherwise opens the
+# given location
+function v() {
+        if [ $# -eq 0 ]; then
+                vim .
+        else
+                vim "$@"
+        fi
 }

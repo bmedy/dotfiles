@@ -1,4 +1,4 @@
-# [Cătălin](https://github.com/alrra)’s dotfiles
+# Medy’s dotfiles
 
 ## Setup
 
@@ -6,8 +6,8 @@ To setup the dotfiles just run one of the following snippets in the terminal:
 
 | OS | Snippet |
 |:---:|:---|
-| OS X | `bash -c "$(curl -LsS https://raw.github.com/alrra/dotfiles/master/dotfiles)"` |
-| Ubuntu | `bash -c "$(wget -qO - https://raw.github.com/alrra/dotfiles/master/dotfiles)"` |
+| OS X | `bash -c "$(curl -LsS https://raw.github.com/bmedy/dotfiles/master/dotfiles)"` |
+| Ubuntu | `bash -c "$(wget -qO - https://raw.github.com/bmedy/dotfiles/master/dotfiles)"` |
 
 That's it! :sparkles:
 
@@ -140,7 +140,7 @@ requirements by using the following files:
 
 If the `~/.bash.local` file exist, it will be automatically sourced
 after all the other [bash related
-files](https://github.com/alrra/dotfiles/tree/master/shell), thus,
+files](https://github.com/bmedy/dotfiles/tree/master/shell), thus,
 allowing its content to add to or overwrite the existing aliases,
 settings, PATH, etc.
 
@@ -150,8 +150,8 @@ Here is a very simple example of a `~/.bash.local` file:
 
 #!/bin/bash
 
-declare -r GIT_USER_EMAIL="alrra@example.com"
-declare -r GIT_USER_NAME="Cătălin Mariș"
+declare -r GIT_USER_EMAIL="bmedy@example.com"
+declare -r GIT_USER_NAME="Medy Belmokhtar"
 
 # ----------------------------------------------------------------------
 
@@ -190,7 +190,7 @@ Same as `~/.vimrc.local` but for `~/.gvimrc`.
 
 If you decide to fork this project, don't forget to substitute my
 username with your own in the [setup snippets](#setup) and [in the
-`dotfiles` script](https://github.com/alrra/dotfiles/blob/5b524ba9ca07b66db1955d18a2fb66bf4b48f677/dotfiles#L3).
+`dotfiles` script](https://github.com/bmedy/dotfiles/blob/5b524ba9ca07b66db1955d18a2fb66bf4b48f677/dotfiles#L3).
 
 
 ## Update
@@ -210,6 +210,8 @@ latest changes.
 
 Inspiration and code was taken from many sources, including:
 
+* [Cătălin Mariș](https://github.com/alrra)
+  [dotfiles](https://github.com/alrra/dotfiles)
 * [Mathias Bynens'](https://github.com/mathiasbynens)
   [dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Nicolas Gallagher's](https://github.com/necolas)

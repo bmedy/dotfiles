@@ -19,15 +19,9 @@ declare -a APT_PACKAGES=(
     "chromium-browser"
     "curl"
     "firefox-trunk"
-    "flashplugin-installer"
-    "gimp"
     "git"
-    "google-chrome-unstable"
     "imagemagick"
     "nautilus-dropbox"
-    "opera"
-    "opera-next"
-    "transmission"
     "vim-gnome"
     "virtualbox"
     "vlc"
@@ -64,17 +58,6 @@ add_software_sources() {
         && add_source_list \
                 "http://dl.google.com/linux/deb/ stable main" \
                 "google-chrome.list"
-
-    # NodeJS
-    [ $(cmd_exists "node") -eq 1 ] \
-        && add_ppa "chris-lea/node.js"
-
-    # Opera & Opera Next
-    [ $(cmd_exists "opera") -eq 1 ] \
-        && add_key "http://deb.opera.com/archive.key" \
-        && add_source_list \
-                "http://deb.opera.com/opera/ stable non-free" \
-                "opera.list"
 
 }
 
