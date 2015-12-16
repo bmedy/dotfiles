@@ -7,12 +7,8 @@ declare -r -a NPM_PACKAGES=(
     "gulp"
     "grunt-cli"
     "yo"
-    "cordova"
-    "generator-gulp-angular"
-    "generator-jhipster"
-    "generator-polymer"
-    "ionic"
-    "jspm"
+    "babel-cli"
+    "jshint"
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
