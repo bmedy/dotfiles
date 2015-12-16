@@ -18,8 +18,9 @@ declare -a APT_PACKAGES=(
     "atom"
     "chromium-browser"
     "curl"
-    "google-chrome"
+    "google-chrome-unstable"
     "git"
+    "tmux"
     "imagemagick"
     "vim-gnome"
     "virtualbox"
@@ -51,7 +52,7 @@ add_software_sources() {
         && add_ppa "ubuntu-mozilla-daily/ppa"
 
     # Google Chrome
-    [ $(cmd_exists "google-chrome") -eq 1 ] \
+    [ $(cmd_exists "google-chrome-unstable") -eq 1 ] \
         && add_key "https://dl-ssl.google.com/linux/linux_signing_key.pub" \
         && add_source_list \
                 "http://dl.google.com/linux/deb/ stable main" \
