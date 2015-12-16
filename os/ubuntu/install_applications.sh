@@ -18,14 +18,12 @@ declare -a APT_PACKAGES=(
     "atom"
     "chromium-browser"
     "curl"
-    "firefox-trunk"
+    "google-chrome"
     "git"
     "imagemagick"
-    "nautilus-dropbox"
     "vim-gnome"
     "virtualbox"
-    "vlc"
-    "xclip"
+    "xcl"
     "zopfli"
 
 )
