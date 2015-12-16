@@ -3,7 +3,6 @@
 cd "$(dirname "${BASH_SOURCE}")" && source "utils.sh"
 
 declare -r -a NODE_VERSIONS=(
-    "iojs"
     "node"
 )
 
@@ -55,7 +54,7 @@ export NVM_DIR="'$NVM_DIR'"
         done
 
         # Use `io.js` by default
-        execute "nvm alias default iojs" "nvm (set default)"
+        execute "nvm alias default node" "nvm (set default)"
 
     fi
 
